@@ -4,6 +4,8 @@ module com.example.module6 {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires org.junit.jupiter.api;
+    requires org.mockito;
 
     opens com.example.module6 to javafx.fxml;
     exports com.example.module6;

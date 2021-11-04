@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.*;
 
 public class ReadWebPage {
-    public void topWords () throws IOException {
+    public boolean topWords () throws IOException {
         //get webpage
         URL url = new URL("https://www.gutenberg.org/files/1065/1065-h/1065-h.htm");
 
@@ -76,6 +76,8 @@ public class ReadWebPage {
         for (Map.Entry<Integer, String> entry : sortedWords.entrySet()) {
             System.out.println("Times used: " + entry.getKey() + " Word: " + entry.getValue());
         }
+
+        return true;
 
     }
 }
