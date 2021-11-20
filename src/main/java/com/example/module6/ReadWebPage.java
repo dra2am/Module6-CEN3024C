@@ -4,7 +4,24 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
+/**
+ * <h1>Contains topWords</h1>
+ *
+ * This class is responsible for reading websites and counting most used words.
+ *
+ *@author Diana Alcantara
+ *@since 2021-11-18
+ */
+
 public class ReadWebPage {
+    /**
+     *<h1>Ranks most used words</h1>
+     *
+     * This method reads a poem directly from a website using URL and Scanner,
+     * then formats the resulting string with regular expressions to remove spaces and unwanted characters,
+     * and finally creates a ranking containing the 20 most used words in the poem.
+     *
+     */
     public boolean topWords () throws IOException {
         //get webpage
         URL url = new URL("https://www.gutenberg.org/files/1065/1065-h/1065-h.htm");

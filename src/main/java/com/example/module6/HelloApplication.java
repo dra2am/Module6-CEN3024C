@@ -7,7 +7,20 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * <h1>Runs Program</h1>
+ *
+ *This class contains the main class that runs the entire program.
+ * It also contains the code to create the javafx text box that appears when the program is run.
+ *
+ * @author Diana Alcantara
+ * @since 2021-11-18
+ */
+
 public class HelloApplication extends Application {
+    /**
+     * Method responsible for set up of JavaFx
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
@@ -17,6 +30,9 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    /**
+     * Main method - runs program
+     */
     public static void main(String[] args) {
         launch();
     }
