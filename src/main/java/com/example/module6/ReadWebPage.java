@@ -3,6 +3,7 @@ package com.example.module6;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import java.sql.*;
 
 /**
  * <h1>Contains topWords</h1>
@@ -31,6 +32,9 @@ public class ReadWebPage {
 
         //result will be appended here
         StringBuffer sb = new StringBuffer();
+
+        //connect to DB
+        Database database = new Database();
 
         //iterate and append
         while (scanner.hasNext()){
@@ -92,7 +96,10 @@ public class ReadWebPage {
         System.out.println("Top Words: ");
         for (Map.Entry<Integer, String> entry : sortedWords.entrySet()) {
             System.out.println("Times used: " + entry.getKey() + " Word: " + entry.getValue());
+            database.insertValues(entry.getValue(), entry.getKey());
         }
+
+        database.readValues();
 
         return true;
 
